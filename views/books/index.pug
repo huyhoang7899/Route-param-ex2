@@ -1,0 +1,16 @@
+h1 Book
+
+a(href="/books/create") Add new book
+
+ul
+	each book in books
+		li
+			b Name:    
+			span= book.title
+			span &nbsp
+			b Author:  
+			span= book.description
+			span &nbsp
+			a(href="/books/" + book.id + "/update") Update 
+			span &nbsp
+			a(href="/books/" + book.id + "/delete") Delete 
